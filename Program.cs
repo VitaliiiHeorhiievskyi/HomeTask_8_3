@@ -6,7 +6,7 @@ namespace HomeTask_8_3
     {
         static void Main(string[] args)
         {
-            Text text = new Text(@"D:\Users\vital\source\repos\HomeTask_8_3\input.txt");
+            Text text = new(@"D:\Users\vital\source\repos\HomeTask_8_3\input.txt");
 
             foreach (var item in text.Sentences)
             {

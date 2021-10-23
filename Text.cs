@@ -87,6 +87,17 @@ namespace HomeTask_8_3
                 }
             }
 
+            if (part)
+                throw new ArgumentException("The sentence is not over !!");
+
+
+        }
+
+        public string GetSentenceWihtMaxDepthOfBrackets()
+        {
+            List<string> temp = new List<string>(Sentences);
+            temp.Sort((fst, second) => GetDepthOfBrackets(second).CompareTo(GetDepthOfBrackets(fst)));
+            return temp[0];
         }
 
         public int GetDepthOfBrackets(string sentence)
@@ -122,12 +133,7 @@ namespace HomeTask_8_3
             return maxDepth;
         }
 
-        public string GetSentenceWihtMaxDepthOfBrackets()
-        {
-            List<string> temp=new List<string>(Sentences);
-            temp.Sort((fst, second) => GetDepthOfBrackets(second).CompareTo(GetDepthOfBrackets(fst)));
-            return temp[0];
-        }
+        
         
     }
 }
